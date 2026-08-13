@@ -3,8 +3,8 @@ name: Release & Docker
 on:
   push:
     tags:
-      - 'v*'
-      - 'exp-v*'
+      - "v*"
+      - "exp-v*"
 
 jobs:
   test:
@@ -29,8 +29,8 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # required: create GitHub Release
-      packages: write   # required: push to ghcr.io
+      contents: write # required: create GitHub Release
+      packages: write # required: push to ghcr.io
 
     steps:
       - uses: actions/checkout@v4
